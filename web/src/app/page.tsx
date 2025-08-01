@@ -15,25 +15,25 @@ export default async function Home() {
   const posts = await getPosts();
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <main className="container mx-auto px-4 py-12">
+    <div className="relative min-h-screen flex flex-col items-center justify-center py-12">
+      <main className="container mx-auto px-4 max-w-4xl w-full bg-white p-8 rounded-lg shadow-xl z-10">
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900">My Awesome Blog</h1>
-          <p className="text-lg text-gray-600 mt-2">Welcome to my corner of the internet.</p>
+          <h1 className="text-6xl font-extrabold text-gray-900 leading-tight">My Awesome Blog</h1>
+          <p className="text-xl text-gray-600 mt-4">Welcome to my corner of the internet. Explore my thoughts and ideas.</p>
         </header>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <section className="grid gap-8 md:grid-cols-2">
           {posts.map((post: Post) => (
             <a href="#" key={post._id} className="block group">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden h-full transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+              <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden h-full transition-transform transform hover:-translate-y-2 hover:shadow-lg border border-gray-200">
                 <div className="p-6">
-                  <h2 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{post.title}</h2>
-                  <p className="text-gray-700 mt-2">{post.description || "No description available."}</p>
+                  <h2 className="text-3xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors mb-2">{post.title}</h2>
+                  <p className="text-gray-600 leading-relaxed">{post.description || "No description available. Click to read more!"}</p>
                 </div>
               </div>
             </a>
           ))}
-        </div>
+        </section>
       </main>
     </div>
   );

@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@keyframes fly {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.animate-fly {
+  animation-name: fly;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
