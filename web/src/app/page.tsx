@@ -1,11 +1,12 @@
 import { client } from "@/sanity/client";
+import { Post } from "@/types";
 
-async function getPosts() {
+async function getPosts(): Promise<Post[]> {
   const posts = await client.fetch(`*[_type == "post"]{
     _id,
     title,
     "slug": slug.current,
-    "description": description,
+    description,
   }`);
   return posts;
 }
@@ -22,7 +23,7 @@ export default async function Home() {
         </header>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post: any) => (
+          {posts.map((post: Post) => (
             <a href="#" key={post._id} className="block group">
               <div className="bg-white rounded-lg shadow-md overflow-hidden h-full transition-transform transform hover:-translate-y-1 hover:shadow-lg">
                 <div className="p-6">
