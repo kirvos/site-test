@@ -1,5 +1,6 @@
 import blockContent from './blockContent'
-import property from './property'
-import propertyType from './propertyType'
+import project from './project'
+import service from './service'
+import companyInfo from './companyInfo'
 
-export const schemaTypes = [property, propertyType, blockContent]
+export const schemaTypes = [project, service, companyInfo, blockContent]

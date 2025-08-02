@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import FlyingBirds from "@/components/FlyingBirds";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "My Blog",
-  description: "A blog about something interesting.",
+  title: "工務店サイト",
+  description: "あなたの理想を形にする工務店",
 };
 
 export default function RootLayout({
@@ -16,10 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased bg-gray-100 text-gray-900`}>
-        <FlyingBirds />
-        {children}
+    <html lang="ja" suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen bg-gray-50 text-gray-900`}>
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );
