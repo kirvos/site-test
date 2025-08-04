@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "工務店サイト",
-  description: "あなたの理想を形にする工務店",
+  title: "ALBA社会保険労務士法人",
+  description: "ALBA社会保険労務士法人",
 };
 
 export default function RootLayout({
