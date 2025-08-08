@@ -1,4 +1,4 @@
-import {defineType, defineArrayOf} from 'sanity'
+import {defineType} from 'sanity'
 
 /**
  * This is the schema definition for the rich text content used in
@@ -9,9 +9,9 @@ import {defineType, defineArrayOf} from 'sanity'
 export default defineType({
   title: 'Block Content',
   name: 'blockContent',
-  type: 'array
+  type: 'array',
   of: [
-    defineArrayOf({
+    {
       title: 'Block',
       type: 'block',
       // Styles let you set what your user can mark up blocks with. These
@@ -52,11 +52,11 @@ export default defineType({
           },
         ],
       },
-    }),
+    },
     // You can add custom types to your portable text editor
-    defineArrayOf({
+    {
       type: 'image',
       options: {hotspot: true},
-    }),
+    },
   ],
 })
