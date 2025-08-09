@@ -33,17 +33,16 @@ export default function Hero() {
               人事労務の課題を、
             </span>
             <br className="md:hidden"/>
-            <span className="bg-gradient-to-r from-[var(--accent-color)] to-yellow-300 bg-clip-text text-transparent drop-shadow-2xl">
+            <span className="bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent drop-shadow-2xl">
               プロが一括解決
             </span>
           </h1>
         </div>
         
         <div className="animate-fade-in-up delay-300">
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
-            ALBA社会保険労務士法人は、複雑な人事労務の課題に対し、<br className="md:hidden"/>
-            <span className="text-[var(--accent-color)] font-semibold">最適なソリューション</span>を提供し、
-            貴社の成長を強力にサポートします。
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
+            ALBA社会保険労務士法人は、複雑な人事労務の課題に対し、<br/>
+            <span className="text-[#febf00] font-semibold">最適なソリューション</span>を提供し、貴社の成長を強力にサポートします。
           </p>
         </div>
         
@@ -51,10 +50,10 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 px-4">
             <a
               href="/contact"
-              className="group bg-gradient-to-r from-[var(--accent-color)] to-yellow-400 text-[var(--primary-color)] text-lg sm:text-xl font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-[var(--accent-color)]/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 relative overflow-hidden w-full sm:w-auto"
+              className="group bg-gradient-to-r from-[#febf00] to-yellow-400 text-[var(--primary-color)] text-lg sm:text-xl font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-[#febf00]/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 relative overflow-hidden w-full sm:w-auto"
             >
               <span className="relative z-10">無料相談はこちら</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-[var(--accent-color)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-[#febf00] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
             <a
               href="/downloads"
