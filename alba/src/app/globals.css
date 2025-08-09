@@ -184,6 +184,7 @@
 /* Selective reset - only body and html */
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   margin: 0;
   padding: 0;
   width: 100%;
