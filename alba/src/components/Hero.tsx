@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
         
         <div className="animate-fade-in-up delay-300">
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4" style={{color: '#ffffff'}}>
             ALBA社会保険労務士法人は、複雑な人事労務の課題に対し、<br/>
             <span className="text-[#febf00] font-semibold">最適なソリューション</span>を提供し、貴社の成長を強力にサポートします。
           </p>

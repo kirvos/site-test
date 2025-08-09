@@ -1,26 +1,37 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <header className="bg-transparent backdrop-blur-md text-white p-4 fixed w-full z-50">
+    <header className={`${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent backdrop-blur-md'} text-white p-4 fixed w-full z-50 transition-all duration-300`}>
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-lg sm:text-xl md:text-2xl font-extrabold bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent">
+        <Link href="/" className="text-lg sm:text-xl md:text-2xl font-extrabold bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent transition-all duration-300">
           <span className="hidden sm:inline">ALBA社会保険労務士法人</span>
           <span className="sm:hidden">ALBA</span>
         </Link>
         <nav className="hidden md:block">
           <ul className="flex space-x-6 text-lg">
-            <li><Link href="/" className="hover:text-[#febf00] transition-colors">Home</Link></li>
-            <li><Link href="/services" className="hover:text-[#febf00] transition-colors">Services</Link></li>
-            <li><Link href="/case-studies" className="hover:text-[#febf00] transition-colors">Case Studies</Link></li>
-            <li><Link href="/blog" className="hover:text-[#febf00] transition-colors">Blog</Link></li>
+            <li><Link href="/" className={`${scrolled ? 'text-gray-800 hover:text-[#febf00]' : 'text-white hover:text-[#febf00]'} transition-all duration-300`}>Home</Link></li>
+            <li><Link href="/services" className={`${scrolled ? 'text-gray-800 hover:text-[#febf00]' : 'text-white hover:text-[#febf00]'} transition-all duration-300`}>Services</Link></li>
+            <li><Link href="/case-studies" className={`${scrolled ? 'text-gray-800 hover:text-[#febf00]' : 'text-white hover:text-[#febf00]'} transition-all duration-300`}>Case Studies</Link></li>
+            <li><Link href="/blog" className={`${scrolled ? 'text-gray-800 hover:text-[#febf00]' : 'text-white hover:text-[#febf00]'} transition-all duration-300`}>Blog</Link></li>
             <li><Link href="/contact" className="bg-gradient-to-r from-[#febf00] to-yellow-300 text-[var(--primary-color)] px-5 py-2 rounded-full hover:bg-white hover:bg-gradient-to-r hover:from-yellow-300 hover:to-[#febf00] transition-all duration-300 font-bold">お問い合わせ</Link></li>
           </ul>
         </nav>
@@ -28,7 +39,7 @@ export default function Header() {
         <div className="md:hidden">
           <button 
             onClick={toggleMenu}
-            className="text-white focus:outline-none transition-transform duration-200 transform hover:scale-110"
+            className={`${scrolled ? 'text-gray-800' : 'text-white'} focus:outline-none transition-all duration-300 transform hover:scale-110`}
           >
             <svg 
               className={`w-8 h-8 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} 
