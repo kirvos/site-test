@@ -44,7 +44,7 @@ export default function Reasons() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="py-20 min-h-screen bg-gradient-to-b from-white to-gray-50 relative overflow-hidden scroll-snap-align-start flex items-center">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] blur-3xl"></div>
