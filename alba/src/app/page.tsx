@@ -5,6 +5,9 @@ import ServiceCards from '@/components/ServiceCards';
 import SocialProof from '@/components/SocialProof';
 import Stats from '@/components/Stats';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function Home() {
   return (
     <>
