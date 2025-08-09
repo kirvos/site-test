@@ -39,15 +39,15 @@ export default function SocialProof() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         {/* Testimonials Section */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
             お客様の声
           </h2>
-          <p className="text-xl text-[var(--text-muted)] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto px-4">
             実際にご利用いただいているお客様からの評価をご紹介します
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20 px-4">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
@@ -86,7 +86,7 @@ export default function SocialProof() {
           </h3>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 px-4">
           {industryLogos.map((industry, index) => (
             <div 
               key={index} 

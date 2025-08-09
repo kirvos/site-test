@@ -28,7 +28,7 @@ export default function Hero() {
       {/* Parallax content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10" style={{transform: `translateY(${scrollY * 0.1}px)`}}>
         <div className="animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
               人事労務の課題を、
             </span>
@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
         
         <div className="animate-fade-in-up delay-300">
-          <p className="text-xl md:text-2xl opacity-90 mb-10 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
             ALBA社会保険労務士法人は、複雑な人事労務の課題に対し、<br className="md:hidden"/>
             <span className="text-[var(--accent-color)] font-semibold">最適なソリューション</span>を提供し、
             貴社の成長を強力にサポートします。
@@ -48,17 +48,17 @@ export default function Hero() {
         </div>
         
         <div className="animate-fade-in-up delay-500">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 px-4">
             <a
               href="/contact"
-              className="group bg-gradient-to-r from-[var(--accent-color)] to-yellow-400 text-[var(--primary-color)] text-xl font-bold px-10 py-5 rounded-full shadow-2xl hover:shadow-[var(--accent-color)]/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 relative overflow-hidden"
+              className="group bg-gradient-to-r from-[var(--accent-color)] to-yellow-400 text-[var(--primary-color)] text-lg sm:text-xl font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-[var(--accent-color)]/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 relative overflow-hidden w-full sm:w-auto"
             >
               <span className="relative z-10">無料相談はこちら</span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-[var(--accent-color)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
             <a
               href="/downloads"
-              className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl font-bold px-10 py-5 rounded-full shadow-2xl hover:bg-white hover:text-[var(--primary-color)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-1"
+              className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-lg sm:text-xl font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl hover:bg-white hover:text-[var(--primary-color)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 w-full sm:w-auto"
             >
               <span className="relative z-10">資料ダウンロード</span>
             </a>

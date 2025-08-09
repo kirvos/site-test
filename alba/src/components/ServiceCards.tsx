@@ -58,20 +58,20 @@ export default function ServiceCards() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
             サービス
           </h2>
-          <p className="text-xl text-[var(--text-muted)] max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto px-4">
             お客様のニーズに合わせた専門的なサービスをご提供します
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4">
           {services.map((service, index) => (
             <Link 
               key={service.title} 
               href={service.href} 
-              className={`group block modern-card p-8 relative overflow-hidden animate-fade-in-up delay-${(index + 1) * 100}`}
+              className={`group block modern-card p-4 sm:p-6 lg:p-8 relative overflow-hidden animate-fade-in-up delay-${(index + 1) * 100}`}
             >
               {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
@@ -83,10 +83,10 @@ export default function ServiceCards() {
               
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)] text-center group-hover:text-[var(--accent-color)] transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold mb-4 text-[var(--primary-color)] text-center group-hover:text-[var(--accent-color)] transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-[var(--text-muted)] text-center leading-relaxed">
+                <p className="text-sm sm:text-base text-[var(--text-muted)] text-center leading-relaxed">
                   {service.description}
                 </p>
               </div>

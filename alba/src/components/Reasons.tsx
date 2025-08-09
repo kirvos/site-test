@@ -53,15 +53,15 @@ export default function Reasons() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
             選ばれる理由
           </h2>
-          <p className="text-xl text-[var(--text-muted)] max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] max-w-3xl mx-auto px-4">
             ALBA社会保険労務士法人が多くのお客様から信頼いただいている理由をご紹介します
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 px-4">
           {reasons.map((reason, index) => (
             <div 
               key={index} 

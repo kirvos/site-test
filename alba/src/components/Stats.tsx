@@ -75,19 +75,19 @@ export default function Stats() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-4">
             数字で見るALBA社会保険労務士の実績
           </h2>
-          <p className="text-white/80 text-lg">
+          <p className="text-white/80 text-base sm:text-lg px-4">
             お客様に選ばれ続ける理由がここにあります
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up delay-${(index + 1) * 100}`}
+              className={`group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 sm:p-6 lg:p-8 text-center hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up delay-${(index + 1) * 100}`}
             >
               {/* Gradient glow effect */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${stat.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`}></div>
@@ -99,7 +99,7 @@ export default function Stats() {
               
               {/* Value */}
               <div className="relative z-10 mb-3">
-                <p className={`text-4xl md:text-5xl font-extrabold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent transform ${isVisible ? 'scale-100' : 'scale-0'} transition-transform duration-700 delay-${(index + 1) * 200}`}>
+                <p className={`text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent transform ${isVisible ? 'scale-100' : 'scale-0'} transition-transform duration-700 delay-${(index + 1) * 200}`}>
                   {stat.value}
                 </p>
               </div>

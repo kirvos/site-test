@@ -56,7 +56,7 @@ export default function LatestNews() {
     return (
       <section className="h-screen bg-white flex items-center justify-center" data-snap>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[var(--primary-color)] px-4">最新セミナー・ニュース</h2>
           <div className="text-center text-gray-600 text-lg">
             <p>読み込み中...</p>
           </div>
@@ -77,7 +77,7 @@ export default function LatestNews() {
             <p>現在、新しいセミナーやニュースはありません。</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4">
             {/* Posts */}
             {posts.map((post) => {
               const href = `/posts/${post.slug?.current || post._id}`;
