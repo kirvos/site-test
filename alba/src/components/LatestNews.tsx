@@ -33,10 +33,13 @@ export default function LatestNews() {
   useEffect(() => {
     async function fetchData() {
       try {
+        console.log('Fetching data...');
         const [postsData, eventsData] = await Promise.all([
           getPosts(),
           getEvents()
         ]);
+        console.log('Posts data received:', postsData);
+        console.log('Events data received:', eventsData);
         setPosts(postsData);
         setEvents(eventsData);
       } catch (error) {
@@ -76,12 +79,15 @@ export default function LatestNews() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Posts */}
-            {posts.map((post) => (
-              <Link 
-                key={post._id} 
-                href={`/posts/${post.slug?.current || post._id}`}
-                className="block"
-              >
+            {posts.map((post) => {
+              const href = `/posts/${post.slug?.current || post._id}`;
+              console.log('Post link:', { title: post.title, href, slug: post.slug });
+              return (
+                <Link 
+                  key={post._id} 
+                  href={href}
+                  className="block"
+                >
                 <div className="bg-gray-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow cursor-pointer hover:bg-gray-100">
                   <h3 className="text-xl font-semibold mb-3 text-gray-800 hover:text-blue-600">
                     {post.title}
@@ -100,8 +106,9 @@ export default function LatestNews() {
                     )}
                   </div>
                 </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
 
             {/* Events */}
             {events.map((event) => (
