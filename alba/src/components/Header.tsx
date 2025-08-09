@@ -20,7 +20,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <header className={`${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent backdrop-blur-md'} text-white p-4 fixed w-full z-50 transition-all duration-300`}>
+    <header className="bg-transparent backdrop-blur-md p-4 fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-lg sm:text-xl md:text-2xl font-extrabold bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent transition-all duration-300">
           <span className="hidden sm:inline">ALBA社会保険労務士法人</span>
