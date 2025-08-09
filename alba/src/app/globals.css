@@ -187,6 +187,7 @@ html {
   padding: 0;
   height: 100%;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -202,12 +203,17 @@ body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
 }
 
 /* Only reset box-sizing globally */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+/* Ensure snap scroll works */
+section[data-snap] {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 /* Typography improvements */
