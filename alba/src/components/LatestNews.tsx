@@ -55,7 +55,7 @@ export default function LatestNews() {
   if (loading) {
     return (
       <section className="py-16 bg-white">
-        <div className="w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
           <div className="text-center text-gray-600 text-lg">
             <p>読み込み中...</p>
@@ -69,7 +69,7 @@ export default function LatestNews() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
         
         {!hasContent ? (

@@ -51,7 +51,7 @@ export default function Reasons() {
         <div className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full bg-gradient-to-r from-[var(--accent-color)] to-[var(--accent-secondary)] blur-3xl"></div>
       </div>
       
-      <div className="w-full relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             選ばれる理由

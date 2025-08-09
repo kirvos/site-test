@@ -181,14 +181,7 @@
   background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
 }
 
-/* Reset margins and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Smooth scrolling */
+/* Selective reset - only body and html */
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -209,6 +202,11 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+}
+
+/* Only reset box-sizing globally */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 /* Typography improvements */
