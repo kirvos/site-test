@@ -44,14 +44,14 @@ export default function Reasons() {
   ];
 
   return (
-    <section className="h-screen bg-gradient-to-b from-white to-gray-50 relative overflow-hidden flex items-center justify-center pt-20" data-snap>
+    <section className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative overflow-hidden pt-20 pb-8" data-snap>
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full bg-gradient-to-r from-[var(--accent-color)] to-[var(--accent-secondary)] blur-3xl"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-screen">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">
             選ばれる理由
