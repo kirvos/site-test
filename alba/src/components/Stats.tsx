@@ -65,7 +65,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="py-16 min-h-screen bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden scroll-snap-align-start flex items-center">
+    <section className="min-h-screen bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden scroll-snap-align-start flex items-center justify-center">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/5 animate-pulse"></div>
@@ -73,7 +73,7 @@ export default function Stats() {
         <div className="absolute top-20 left-1/2 w-64 h-64 rounded-full bg-gradient-to-r from-white/5 to-transparent animate-float"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             数字で見るALBA社会保険労務士の実績

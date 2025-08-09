@@ -183,11 +183,11 @@
 
 /* Selective reset - only body and html */
 html {
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -202,9 +202,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
 }
 
 /* Only reset box-sizing globally */

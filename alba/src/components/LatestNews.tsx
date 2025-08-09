@@ -54,8 +54,8 @@ export default function LatestNews() {
 
   if (loading) {
     return (
-      <section className="py-16 min-h-screen bg-white scroll-snap-align-start flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="min-h-screen bg-white scroll-snap-align-start flex items-center justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
           <div className="text-center text-gray-600 text-lg">
             <p>読み込み中...</p>
@@ -68,7 +68,7 @@ export default function LatestNews() {
   const hasContent = posts.length > 0 || events.length > 0;
 
   return (
-    <section className="py-16 min-h-screen bg-white scroll-snap-align-start flex items-center">
+    <section className="min-h-screen bg-white scroll-snap-align-start flex items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
         
