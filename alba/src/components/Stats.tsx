@@ -65,7 +65,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden scroll-snap-align-start flex items-center justify-center">
+    <section className="h-screen bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden flex items-center justify-center" style={{scrollSnapAlign: 'start'}}>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/5 animate-pulse"></div>

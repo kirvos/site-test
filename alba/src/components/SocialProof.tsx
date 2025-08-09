@@ -29,7 +29,7 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-white relative overflow-hidden scroll-snap-align-start flex items-center justify-center">
+    <section className="h-screen bg-gradient-to-br from-gray-50 to-white relative overflow-hidden flex items-center justify-center" style={{scrollSnapAlign: 'start'}}>
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] animate-pulse"></div>

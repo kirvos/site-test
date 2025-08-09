@@ -11,7 +11,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden h-screen flex items-center justify-center text-white scroll-snap-align-start">
+    <section className="relative overflow-hidden h-screen flex items-center justify-center text-white" style={{scrollSnapAlign: 'start'}}>
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)] via-[#002A5E] to-[var(--secondary-color)]">
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
