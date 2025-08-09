@@ -54,8 +54,8 @@ export default function LatestNews() {
 
   if (loading) {
     return (
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
+      <section className="py-16 bg-white">
+        <div className="w-full">
           <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
           <div className="text-center text-gray-600 text-lg">
             <p>読み込み中...</p>
@@ -68,8 +68,8 @@ export default function LatestNews() {
   const hasContent = posts.length > 0 || events.length > 0;
 
   return (
-    <section className="py-16 px-4 bg-white">
-      <div className="container mx-auto">
+    <section className="py-16 bg-white">
+      <div className="w-full">
         <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
         
         {!hasContent ? (

@@ -26,7 +26,7 @@ export default function Hero() {
       </div>
 
       {/* Parallax content */}
-      <div className="container mx-auto text-center z-10 px-4" style={{transform: `translateY(${scrollY * 0.1}px)`}}>
+      <div className="w-full text-center z-10" style={{transform: `translateY(${scrollY * 0.1}px)`}}>
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">

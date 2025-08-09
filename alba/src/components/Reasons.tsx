@@ -44,14 +44,14 @@ export default function Reasons() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full bg-gradient-to-r from-[var(--accent-color)] to-[var(--accent-secondary)] blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto relative z-10">
+      <div className="w-full relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             選ばれる理由

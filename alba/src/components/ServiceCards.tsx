@@ -49,14 +49,14 @@ const services = [
 
 export default function ServiceCards() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] animate-float"></div>
         <div className="absolute bottom-20 right-20 w-24 h-24 rounded-lg bg-gradient-to-l from-[var(--accent-color)] to-[var(--accent-secondary)] animate-float delay-500 transform rotate-45"></div>
       </div>
       
-      <div className="container mx-auto relative z-10">
+      <div className="w-full relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             サービス

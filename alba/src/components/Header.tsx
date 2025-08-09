@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-[var(--primary-color)] text-white p-4 shadow-lg fixed w-full z-50">
+    <header className="bg-transparent backdrop-blur-md text-white p-4 fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-extrabold text-[var(--accent-color)]">
           ALBA社会保険労務士法人
