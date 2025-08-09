@@ -7,12 +7,13 @@ export default defineConfig({
   name: 'default',
   title: 'ALBA',
 
-  projectId: 'd5va5nfa',
-  dataset: 'alba_dataset',
+  projectId: 'yc9q9o42',
+  dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schemaTypes,
   },
+  
 })
