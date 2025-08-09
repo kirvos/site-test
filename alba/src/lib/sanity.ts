@@ -35,7 +35,7 @@ export async function getPosts() {
     return posts;
   } catch (error) {
     console.error('Error fetching posts:', error);
-    console.error('Error details:', error.message, error.statusCode);
+    console.error('Error details:', error instanceof Error ? error.message : 'Unknown error');
     return [];
   }
 }
