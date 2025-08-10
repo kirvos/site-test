@@ -17,9 +17,9 @@ export default function Header() {
         </Link>
         <nav className="hidden md:block">
           <ul className="flex space-x-6 text-lg">
-            <li><Link href="/services" className="text-white hover:text-[#febf00] transition-colors duration-300">Services</Link></li>
-            <li><Link href="/case-studies" className="text-white hover:text-[#febf00] transition-colors duration-300">Case Studies</Link></li>
-            <li><Link href="/blog" className="text-white hover:text-[#febf00] transition-colors duration-300">Blog</Link></li>
+            <li><Link href="/services" className="text-white hover:text-[#febf00] transition-colors duration-300">サービス</Link></li>
+            <li><Link href="/case-studies" className="text-white hover:text-[#febf00] transition-colors duration-300">ケーススタディ</Link></li>
+            <li><Link href="/blog" className="text-white hover:text-[#febf00] transition-colors duration-300">ブログ</Link></li>
             <li><Link href="/contact" className="bg-gradient-to-r from-[#febf00] to-yellow-300 text-[var(--primary-color)] px-5 py-2 rounded-full hover:bg-white hover:bg-gradient-to-r hover:from-yellow-300 hover:to-[#febf00] transition-all duration-300 font-bold">お問い合わせ</Link></li>
           </ul>
         </nav>
@@ -56,7 +56,7 @@ export default function Header() {
                 className="block py-3 px-4 text-white hover:text-[#febf00] hover:bg-white/10 rounded-lg transition-colors text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                サービス
               </Link>
             </li>
             <li>
@@ -65,7 +65,7 @@ export default function Header() {
                 className="block py-3 px-4 text-white hover:text-[#febf00] hover:bg-white/10 rounded-lg transition-colors text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Case Studies
+                ケーススタディ
               </Link>
             </li>
             <li>
@@ -74,7 +74,7 @@ export default function Header() {
                 className="block py-3 px-4 text-white hover:text-[#febf00] hover:bg-white/10 rounded-lg transition-colors text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Blog
+                ブログ
               </Link>
             </li>
             <li>

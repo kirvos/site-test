@@ -34,14 +34,14 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-white relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
+    <section className="snap-start min-h-[100svh] bg-gradient-to-br from-gray-50 to-white relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] animate-pulse"></div>
         <div className="absolute bottom-20 left-20 w-24 h-24 rounded-lg bg-gradient-to-l from-[var(--accent-color)] to-[var(--accent-secondary)] animate-pulse delay-700 transform rotate-45"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-[100svh]">
         {/* Testimonials Section */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 gradient-text">

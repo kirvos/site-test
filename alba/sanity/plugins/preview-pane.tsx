@@ -10,7 +10,7 @@ const BASE_URL = process.env.NODE_ENV === 'development'
 
 // プレビューアクションコンポーネント
 const PreviewAction: DocumentActionComponent = ({ id, type, draft, published }) => {
-  if (type !== 'post' || !published?.slug?.current) {
+  if (type !== 'post' || !published || !('slug' in published) || !(published.slug as any)?.current) {
     return null
   }
 
@@ -18,7 +18,7 @@ const PreviewAction: DocumentActionComponent = ({ id, type, draft, published }) 
     label: 'プレビューを開く',
     icon: () => '👁',
     onHandle: () => {
-      const previewUrl = `${BASE_URL}/api/preview?secret=${PREVIEW_SECRET}&slug=${published.slug.current}`
+      const previewUrl = `${BASE_URL}/api/preview?secret=${PREVIEW_SECRET}&slug=${(published.slug as any).current}`
       window.open(previewUrl, '_blank')
     }
   }

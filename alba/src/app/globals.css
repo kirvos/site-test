@@ -182,7 +182,7 @@
 }
 
 /* Smooth scroll setup */
-html {
+html, body { 
   margin: 0;
   padding: 0;
   height: 100%;
@@ -212,6 +212,8 @@ body {
 /* Snap scroll container */
 .snap-container {
   scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
 }
 
 /* Ensure snap scroll works for sections with data-snap */

@@ -11,8 +11,10 @@ interface StatItem {
 
 export default function Stats() {
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
+    setMounted(true);
     const timer = setTimeout(() => setIsVisible(true), 500);
     return () => clearTimeout(timer);
   }, []);
@@ -64,8 +66,64 @@ export default function Stats() {
     },
   ];
 
+  if (!mounted) {
+    return (
+      <section className="snap-start min-h-[100svh] bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/5 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/10 animate-pulse delay-700"></div>
+          <div className="absolute top-20 left-1/2 w-64 h-64 rounded-full bg-gradient-to-r from-white/5 to-transparent animate-float"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-[100svh]">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-4">
+              数字で見るALBA社会保険労務士の実績
+            </h2>
+            <p className="text-white text-base sm:text-lg px-4" style={{color: '#ffffff !important'}}>
+              お客様に選ばれ続ける理由がここにあります
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className={`group relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 sm:p-6 lg:p-8 text-center hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up delay-${(index + 1) * 100}`}
+              >
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${stat.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`}></div>
+                <div className={`relative z-10 mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.gradient} text-white transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                  {stat.icon}
+                </div>
+                <div className="relative z-10 mb-3">
+                  <p className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-white transform scale-0 transition-transform duration-700 delay-${(index + 1) * 200}`} style={{color: '#ffffff !important', textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>
+                    {stat.value}
+                  </p>
+                </div>
+                <div className="relative z-10">
+                  <p className="text-white font-semibold text-lg mb-2" style={{color: '#ffffff !important'}}>
+                    {stat.label}
+                  </p>
+                  <p className="text-white text-sm" style={{color: '#ffffff !important'}}>
+                    {stat.description}
+                  </p>
+                </div>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 text-center animate-fade-in-up delay-700">
+            <div className="inline-flex items-center space-x-2 text-white/60">
+              <div className="w-2 h-2 rounded-full bg-white/40"></div>
+              <span className="text-sm">2024年12月現在</span>
+              <div className="w-2 h-2 rounded-full bg-white/40"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="min-h-screen bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
+    <section className="snap-start min-h-[100svh] bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/5 animate-pulse"></div>
@@ -73,12 +131,12 @@ export default function Stats() {
         <div className="absolute top-20 left-1/2 w-64 h-64 rounded-full bg-gradient-to-r from-white/5 to-transparent animate-float"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-[100svh]">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-4">
             数字で見るALBA社会保険労務士の実績
           </h2>
-          <p className="text-white/80 text-base sm:text-lg px-4">
+          <p className="text-white text-base sm:text-lg px-4" style={{color: '#ffffff !important'}}>
             お客様に選ばれ続ける理由がここにあります
           </p>
         </div>
@@ -99,17 +157,17 @@ export default function Stats() {
               
               {/* Value */}
               <div className="relative z-10 mb-3">
-                <p className={`text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent transform ${isVisible ? 'scale-100' : 'scale-0'} transition-transform duration-700 delay-${(index + 1) * 200}`}>
+                <p className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-white transform ${mounted && isVisible ? 'scale-100' : 'scale-0'} transition-transform duration-700 delay-${(index + 1) * 200}`} style={{color: '#ffffff !important', textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>
                   {stat.value}
                 </p>
               </div>
               
               {/* Label */}
               <div className="relative z-10">
-                <p className="text-white font-semibold text-lg mb-2">
+                <p className="text-white font-semibold text-lg mb-2" style={{color: '#ffffff !important'}}>
                   {stat.label}
                 </p>
-                <p className="text-white/70 text-sm">
+                <p className="text-white text-sm" style={{color: '#ffffff !important'}}>
                   {stat.description}
                 </p>
               </div>
