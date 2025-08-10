@@ -1,8 +1,9 @@
-import { client } from '@/lib/sanity';
+import { getPostBySlug } from '@/lib/sanity';
 import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { cookies } from 'next/headers';
 
 interface Post {
   _id: string;
@@ -19,35 +20,15 @@ interface Post {
     asset: { url: string };
     alt?: string;
   };
-}
-
-async function getPost(slug: string): Promise<Post | null> {
-  const query = `
-    *[_type == "post" && slug.current == $slug][0] {
-      _id,
-      title,
-      slug,
-      publishedAt,
-      _createdAt,
-      body,
-      mainImage {
-        asset-> {
-          url
-        },
-        alt
-      },
-      author-> {
-        name
-      }
-    }
-  `;
-  
-  return await client.fetch(query, { slug });
+  categories?: Array<{ title: string }>;
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const cookieStore = await cookies();
+  const isPreview = cookieStore.get('sanity-preview')?.value === 'true';
+  
+  const post = await getPostBySlug(slug, isPreview);
   
   if (!post) {
     notFound();
@@ -55,6 +36,19 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   return (
     <div className="min-h-screen bg-white">
+      {/* プレビューバナー */}
+      {isPreview && (
+        <div className="bg-yellow-500 text-black px-4 py-2 text-center">
+          <span className="font-semibold">プレビューモード</span> - ドラフト記事を表示中
+          <Link 
+            href="/api/exit-preview" 
+            className="ml-4 underline hover:text-gray-700"
+          >
+            プレビューを終了
+          </Link>
+        </div>
+      )}
+      
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4">

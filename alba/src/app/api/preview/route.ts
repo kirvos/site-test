@@ -1,5 +1,4 @@
-import { redirect } from 'next/navigation'
-import { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
@@ -17,7 +16,7 @@ export async function GET(request: NextRequest) {
   }
 
   // プレビューモードを有効にして投稿ページにリダイレクト
-  const response = redirect(`/posts/${slug}`)
+  const response = NextResponse.redirect(new URL(`/posts/${slug}`, request.url))
   response.headers.set('Set-Cookie', 'sanity-preview=true; Path=/; HttpOnly; SameSite=Strict')
   
   return response
