@@ -3,10 +3,12 @@ import { PreviewPane } from './preview-pane'
 
 export const structure = (S: StructureBuilder, context: StructureResolverContext) =>
   S.list()
+    .id('root')
     .title('コンテンツ')
     .items([
       // 記事一覧（プレビュー付き）
       S.listItem()
+        .id('posts')
         .title('投稿')
         .child(
           S.documentTypeList('post')
@@ -16,11 +18,16 @@ export const structure = (S: StructureBuilder, context: StructureResolverContext
                 .documentId(documentId)
                 .schemaType('post')
                 .views([
-                  // デフォルトのフォームビュー
-                  S.view.form().title('編集'),
-                  // プレビューペイン
+                  // 分割ビュー（編集とプレビューを同時表示）
+                  S.view
+                    .form()
+                    .id('editor')
+                    .title('編集')
+                    .icon(() => '✏️'),
+                  // プレビューのみのビュー
                   S.view
                     .component(PreviewPane)
+                    .id('preview')
                     .title('プレビュー')
                     .icon(() => '👁'),
                 ])
