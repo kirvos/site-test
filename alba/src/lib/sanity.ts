@@ -15,7 +15,7 @@ export const previewClient = createClient({
   useCdn: false,
   apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2023-05-03',
   token: process.env.SANITY_API_TOKEN,
-  perspective: 'previewDrafts', // ドラフト記事も取得
+  perspective: 'drafts', // ドラフト記事も取得
 })
 
 // プレビューモードかどうかによってクライアントを選択

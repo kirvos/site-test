@@ -1,7 +1,7 @@
-import { StructureBuilder, StructureResolverContext } from 'sanity/structure'
+import { StructureBuilder } from 'sanity/structure'
 import { PreviewPane } from './preview-pane'
 
-export const structure = (S: StructureBuilder, context: StructureResolverContext) =>
+export const structure = (S: StructureBuilder) =>
   S.list()
     .id('root')
     .title('コンテンツ')
@@ -12,19 +12,20 @@ export const structure = (S: StructureBuilder, context: StructureResolverContext
         .title('投稿')
         .child(
           S.documentTypeList('post')
+            .id('post-list')
             .title('投稿')
             .child((documentId) =>
               S.document()
                 .documentId(documentId)
                 .schemaType('post')
                 .views([
-                  // 分割ビュー（編集とプレビューを同時表示）
+                  // 編集ビュー
                   S.view
                     .form()
                     .id('editor')
                     .title('編集')
                     .icon(() => '✏️'),
-                  // プレビューのみのビュー
+                  // プレビュービュー
                   S.view
                     .component(PreviewPane)
                     .id('preview')
@@ -35,6 +36,7 @@ export const structure = (S: StructureBuilder, context: StructureResolverContext
         ),
       
       // その他のドキュメントタイプ
+      S.divider(),
       ...S.documentTypeListItems().filter(
         (listItem) => !['post'].includes(listItem.getId()!)
       ),

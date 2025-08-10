@@ -1,22 +1,27 @@
+import Link from 'next/link';
+
 export default function SocialProof() {
   const testimonials = [
     {
       quote: "ALBAさんのおかげで、複雑な社会保険手続きがスムーズになり、本業に集中できるようになりました。",
       author: "田中 様",
       company: "製造業A社",
-      role: "人事部長"
+      role: "人事部長",
+      caseStudyLink: "/case-studies/manufacturing-a"
     },
     {
       quote: "助成金申請で大きな成果を上げることができ、事業拡大の資金調達に成功しました。",
       author: "佐藤 様", 
       company: "IT企業B社",
-      role: "代表取締役"
+      role: "代表取締役",
+      caseStudyLink: "/case-studies/it-b"
     },
     {
       quote: "迅速で丁寧な対応により、急な手続きにも柔軟に対応していただけて助かっています。",
       author: "鈴木 様",
       company: "サービス業C社", 
-      role: "総務課長"
+      role: "総務課長",
+      caseStudyLink: "/case-studies/service-c"
     }
   ];
 
@@ -49,33 +54,50 @@ export default function SocialProof() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20 px-4">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <Link 
               key={index} 
-              className={`modern-card p-8 relative overflow-hidden animate-fade-in-up delay-${(index + 1) * 100}`}
+              href={testimonial.caseStudyLink}
+              className={`group block modern-card p-8 relative overflow-hidden animate-fade-in-up delay-${(index + 1) * 100} hover:transform hover:scale-105 transition-all duration-300`}
             >
               {/* Quote icon */}
-              <div className="absolute top-4 right-4 text-[var(--primary-color)]/10">
+              <div className="absolute top-4 right-4 text-[var(--primary-color)]/10 group-hover:text-[var(--primary-color)]/20 transition-colors duration-300">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                 </svg>
               </div>
               
               {/* Quote */}
-              <blockquote className="text-[var(--text-muted)] leading-relaxed mb-6 relative z-10">
+              <blockquote className="text-[var(--text-muted)] leading-relaxed mb-6 relative z-10 group-hover:text-[var(--text-primary)] transition-colors duration-300">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               
               {/* Author */}
-              <div className="flex items-center relative z-10">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] flex items-center justify-center text-white font-bold mr-4">
-                  {testimonial.author.charAt(0)}
+              <div className="flex items-center justify-between relative z-10">
+                <div className="flex items-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
+                    {testimonial.author.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[var(--primary-color)] group-hover:text-[var(--accent-color)] transition-colors duration-300">{testimonial.author}</p>
+                    <p className="text-sm text-[var(--text-muted)]">{testimonial.company} {testimonial.role}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-[var(--primary-color)]">{testimonial.author}</p>
-                  <p className="text-sm text-[var(--text-muted)]">{testimonial.company} {testimonial.role}</p>
+                
+                {/* Arrow indicator */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <svg className="w-5 h-5 text-[var(--accent-color)] transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                  </svg>
                 </div>
               </div>
-            </div>
+              
+              {/* "詳細を見る" indicator */}
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-xs text-[var(--accent-color)] font-semibold bg-[var(--accent-color)]/10 px-2 py-1 rounded">
+                  詳細を見る
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
 
