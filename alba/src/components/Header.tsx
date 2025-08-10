@@ -17,7 +17,6 @@ export default function Header() {
         </Link>
         <nav className="hidden md:block">
           <ul className="flex space-x-6 text-lg">
-            <li><Link href="/" className="text-white hover:text-[#febf00] transition-colors duration-300">Home</Link></li>
             <li><Link href="/services" className="text-white hover:text-[#febf00] transition-colors duration-300">Services</Link></li>
             <li><Link href="/case-studies" className="text-white hover:text-[#febf00] transition-colors duration-300">Case Studies</Link></li>
             <li><Link href="/blog" className="text-white hover:text-[#febf00] transition-colors duration-300">Blog</Link></li>
@@ -51,15 +50,6 @@ export default function Header() {
       <div className={`md:hidden fixed top-16 left-0 right-0 bg-[var(--primary-color)]/95 backdrop-blur-md transition-all duration-300 ease-in-out z-40 ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
         <nav className="px-6 py-4">
           <ul className="space-y-4">
-            <li>
-              <Link 
-                href="/" 
-                className="block py-3 px-4 text-white hover:text-[#febf00] hover:bg-white/10 rounded-lg transition-colors text-lg font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
             <li>
               <Link 
                 href="/services" 
