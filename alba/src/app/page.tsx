@@ -17,6 +17,13 @@ export default function Home() {
       <SocialProof />
       <Reasons />
       <LatestNews />
+      <section className="h-screen bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] flex items-center justify-center" data-snap>
+        <div className="text-center">
+          <p className="text-lg" style={{color: '#ffffff'}}>
+            ALBA社会保険労務士事務所©
+          </p>
+        </div>
+      </section>
     </>
   );
 }

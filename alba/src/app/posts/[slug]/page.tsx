@@ -5,23 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { cookies } from 'next/headers';
 
-interface Post {
-  _id: string;
-  title: string;
-  publishedAt?: string;
-  _createdAt: string;
-  body?: Array<{
-    _type: string;
-    children?: Array<{ text: string }>;
-  }>;
-  slug: { current: string };
-  author?: { name: string };
-  mainImage?: {
-    asset: { url: string };
-    alt?: string;
-  };
-  categories?: Array<{ title: string }>;
-}
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

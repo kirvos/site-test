@@ -24,8 +24,8 @@ export default defineConfig({
           ? 'http://localhost:3000' 
           : 'https://your-production-domain.com'
       
-      if (document._type === 'post') {
-        return `${baseUrl}/api/preview?secret=${process.env.SANITY_PREVIEW_SECRET || 'your-secret-token'}&slug=${document.slug?.current}`
+      if (document._type === 'post' && document.slug && typeof document.slug === 'object' && 'current' in document.slug) {
+        return `${baseUrl}/api/preview?secret=${process.env.SANITY_PREVIEW_SECRET || 'your-secret-token'}&slug=${document.slug.current}`
       }
       
       return prev
