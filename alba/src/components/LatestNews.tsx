@@ -54,7 +54,7 @@ export default function LatestNews() {
 
   if (loading) {
     return (
-      <section className="min-h-screen bg-white pt-20 pb-8" data-snap>
+      <section className="min-h-screen bg-white pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col justify-center min-h-screen">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[var(--primary-color)] px-4">最新セミナー・ニュース</h2>
           <div className="text-center text-gray-600 text-lg">
@@ -68,7 +68,7 @@ export default function LatestNews() {
   const hasContent = posts.length > 0 || events.length > 0;
 
   return (
-    <section className="min-h-screen bg-white pt-20 pb-8" data-snap>
+    <section className="min-h-screen bg-white pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col justify-center min-h-screen">
         <h2 className="text-4xl font-bold text-center mb-12 text-[var(--primary-color)]">最新セミナー・ニュース</h2>
         
