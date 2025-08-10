@@ -40,10 +40,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="pt-16 flex-grow">{children}</main>
         <Footer />
       </body>
     </html>

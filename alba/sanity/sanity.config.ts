@@ -15,5 +15,19 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  document: {
+    productionUrl: async (prev, {document}) => {
+      const baseUrl = process.env.NODE_ENV === 'development' 
+        ? 'http://localhost:3000' 
+        : 'https://your-production-domain.com'
+      
+      if (document._type === 'post') {
+        return `${baseUrl}/api/preview?secret=your-secret-token&slug=${document.slug?.current}`
+      }
+      
+      return prev
+    },
+  },
   
 })
