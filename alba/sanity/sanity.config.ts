@@ -18,12 +18,14 @@ export default defineConfig({
 
   document: {
     productionUrl: async (prev, {document}) => {
-      const baseUrl = process.env.NODE_ENV === 'development' 
-        ? 'http://localhost:3000' 
-        : 'https://your-production-domain.com'
+      const baseUrl = process.env.VERCEL_URL 
+        ? `https://${process.env.VERCEL_URL}`
+        : process.env.NODE_ENV === 'development' 
+          ? 'http://localhost:3000' 
+          : 'https://your-production-domain.com'
       
       if (document._type === 'post') {
-        return `${baseUrl}/api/preview?secret=your-secret-token&slug=${document.slug?.current}`
+        return `${baseUrl}/api/preview?secret=${process.env.SANITY_PREVIEW_SECRET || 'your-secret-token'}&slug=${document.slug?.current}`
       }
       
       return prev
