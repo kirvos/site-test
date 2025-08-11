@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 const caseStudies = [
   {
@@ -272,6 +273,7 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

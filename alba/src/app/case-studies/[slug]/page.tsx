@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 const caseStudies = [
   {
@@ -407,6 +408,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
