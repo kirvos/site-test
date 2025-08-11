@@ -258,7 +258,7 @@ export default function CaseStudiesPage() {
             あなたの会社も<br />
             成功事例の仲間入りを
           </h2>
-          <p className="text-lg sm:text-xl text-white mb-8">
+          <p className="text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
             お客様一人ひとりの課題に合わせたオーダーメイドのソリューションをご提案いたします
           </p>
           <Link 

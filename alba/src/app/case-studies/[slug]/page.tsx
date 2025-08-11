@@ -380,7 +380,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
               <h2 className="text-3xl font-bold text-white mb-6">
                 あなたの課題も解決しませんか？
               </h2>
-              <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
+              <p className="text-lg mb-8 max-w-2xl mx-auto" style={{color: '#ffffff !important'}}>
                 お客様一人ひとりの課題に合わせたオーダーメイドのソリューションをご提案いたします
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
