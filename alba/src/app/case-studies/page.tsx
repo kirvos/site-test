@@ -152,7 +152,7 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-16">
       {/* Hero Section */}
       <section className="pt-24 pb-16 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
