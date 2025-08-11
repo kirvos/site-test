@@ -185,7 +185,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
             </Link>
             <span className="text-gray-400">/</span>
             <Link href="/case-studies" className="text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-colors">
-              ケーススタディ
+              事例紹介
             </Link>
             <span className="text-gray-400">/</span>
             <span className="text-[var(--text-muted)] truncate">{caseStudy.client.company}</span>
