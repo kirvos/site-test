@@ -376,17 +376,17 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
 
           {/* CTA */}
           <div className="text-center animate-fade-in-up delay-500">
-            <div className="modern-card p-8 sm:p-12">
-              <h2 className="text-3xl font-bold text-[var(--primary-color)] mb-6">
+            <div className="p-8 sm:p-12 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] rounded-lg">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 あなたの課題も解決しませんか？
               </h2>
-              <p className="text-lg text-[var(--text-muted)] mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
                 お客様一人ひとりの課題に合わせたオーダーメイドのソリューションをご提案いたします
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact" 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white rounded-lg font-bold hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)] transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[var(--primary-color)] rounded-lg font-bold hover:bg-gray-50 transition-all duration-300 transform hover:scale-105"
                 >
                   無料相談を予約する
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -395,7 +395,7 @@ export default async function CaseStudyDetailPage({ params }: { params: Promise<
                 </Link>
                 <Link 
                   href="/case-studies" 
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-[var(--primary-color)] text-[var(--primary-color)] rounded-lg font-bold hover:bg-[var(--primary-color)] hover:text-white transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-bold hover:bg-white hover:text-[var(--primary-color)] transition-all duration-300"
                 >
                   他の事例を見る
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
