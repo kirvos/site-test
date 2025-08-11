@@ -10,7 +10,7 @@ export const revalidate = 0;
 
 export default function Home() {
   return (
-    <div className="snap-container h-[100svh] overflow-y-auto snap-y snap-mandatory scroll-pt-16 scroll-pb-28 absolute inset-0 top-16">
+    <div className="snap-container overflow-y-auto snap-y snap-mandatory -mt-16">
       <Hero />
       <Stats />
       <ServiceCards />
