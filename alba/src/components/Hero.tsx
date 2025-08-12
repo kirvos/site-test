@@ -15,7 +15,7 @@ export default function Hero() {
 
   if (!mounted) {
     return (
-      <section className="snap-start relative overflow-hidden h-[100svh] flex items-center justify-center text-white pt-20 sm:pt-20 md:pt-20" data-snap>
+      <section className="hero-section snap-start relative overflow-hidden h-[100svh] flex items-center justify-center text-white pt-28 sm:pt-24 md:pt-20" data-snap>
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)] via-[#002A5E] to-[var(--secondary-color)]">
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
@@ -71,7 +71,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="snap-start relative overflow-hidden h-[100svh] flex items-center justify-center text-white pt-20 sm:pt-20 md:pt-20" data-snap>
+    <section className="hero-section snap-start relative overflow-hidden h-[100svh] flex items-center justify-center text-white pt-28 sm:pt-24 md:pt-20" data-snap>
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)] via-[#002A5E] to-[var(--secondary-color)]">
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

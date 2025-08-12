@@ -11,9 +11,8 @@ export default function Header() {
   return (
     <header className="bg-gradient-to-r from-[var(--primary-color)]/90 to-[var(--secondary-color)]/90 backdrop-blur-md p-4 fixed w-full z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-lg sm:text-xl md:text-2xl font-extrabold bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent transition-all duration-300">
-          <span className="hidden sm:inline">ALBA社会保険労務士法人</span>
-          <span className="sm:hidden">ALBA</span>
+        <Link href="/" className="text-base xs:text-lg sm:text-xl md:text-xl lg:text-2xl font-extrabold bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent transition-all duration-300 whitespace-nowrap">
+          ALBA社会保険労務士法人
         </Link>
         <nav className="hidden md:block">
           <ul className="flex space-x-6 text-lg">

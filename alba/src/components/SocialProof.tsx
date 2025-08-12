@@ -34,7 +34,7 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="snap-start min-h-[100svh] bg-gradient-to-br from-gray-50 to-white relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
+    <section className="snap-start min-h-[100svh] bg-gradient-to-br from-gray-50 to-white relative overflow-hidden pt-32 sm:pt-28 md:pt-24 pb-8" data-snap>
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] animate-pulse"></div>

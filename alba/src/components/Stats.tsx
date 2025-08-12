@@ -68,7 +68,7 @@ export default function Stats() {
 
   if (!mounted) {
     return (
-      <section className="snap-start min-h-[100svh] bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
+      <section className="snap-start min-h-[100svh] bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden pt-32 sm:pt-28 md:pt-24 pb-8" data-snap>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/5 animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-white/10 animate-pulse delay-700"></div>
@@ -123,7 +123,7 @@ export default function Stats() {
   }
 
   return (
-    <section className="snap-start min-h-[100svh] bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden pt-24 sm:pt-20 md:pt-20 pb-8" data-snap>
+    <section className="snap-start min-h-[100svh] bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] relative overflow-hidden pt-32 sm:pt-28 md:pt-24 pb-8" data-snap>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-white/5 animate-pulse"></div>
