@@ -228,23 +228,26 @@ section[data-snap] {
   scroll-snap-stop: always;
 }
 
-/* Mobile-specific behavior - Only Hero snaps, others free scroll */
+/* Mobile-specific behavior - Disable snap scroll entirely on mobile */
 @media (max-width: 1023px) {
   .snap-container {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: none !important;
     overscroll-behavior-y: contain;
     touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
   
-  /* Only Hero section snaps on mobile */
-  .hero-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+  /* Remove all snap behavior on mobile */
+  .hero-section,
+  section[data-snap] {
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
   }
   
-  /* All other sections don't snap on mobile */
-  .hero-section ~ * {
-    scroll-snap-align: none;
+  /* Ensure sections have normal height on mobile */
+  .hero-section,
+  section[data-snap] {
+    min-height: auto;
   }
 }
 

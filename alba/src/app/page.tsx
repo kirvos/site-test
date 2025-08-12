@@ -11,7 +11,7 @@ export const revalidate = 0;
 
 export default function Home() {
   return (
-    <div className="snap-container h-screen overflow-y-scroll snap-y snap-proximity lg:snap-mandatory">
+    <div className="snap-container h-screen overflow-y-scroll lg:snap-y lg:snap-mandatory">
       <Hero />
       <Stats />
       <ServiceCards />
