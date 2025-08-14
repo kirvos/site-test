@@ -228,25 +228,25 @@ section[data-snap] {
   scroll-snap-stop: always;
 }
 
-/* Mobile-specific behavior - Disable snap scroll entirely on mobile */
+/* Mobile-specific behavior - Only allow hero snap on mobile/tablet */
 @media (max-width: 1023px) {
   .snap-container {
-    scroll-snap-type: none !important;
+    scroll-snap-type: y proximity !important;
     overscroll-behavior-y: contain;
     touch-action: pan-y;
     -webkit-overflow-scrolling: touch;
   }
   
-  /* Remove all snap behavior on mobile */
-  .hero-section,
-  section[data-snap] {
-    scroll-snap-align: none !important;
-    scroll-snap-stop: normal !important;
+  /* Only hero section snaps on mobile/tablet */
+  .hero-section {
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
   }
   
-  /* Ensure sections have normal height on mobile */
-  .hero-section,
-  section[data-snap] {
+  /* Remove snap behavior for all other sections on mobile */
+  section[data-snap]:not(.hero-section) {
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
     min-height: auto;
   }
 }
