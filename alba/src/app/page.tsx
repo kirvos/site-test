@@ -11,14 +11,16 @@ export const revalidate = 0;
 
 export default function Home() {
   return (
-    <div className="snap-container h-screen overflow-y-scroll lg:snap-y lg:snap-mandatory">
-      <Hero />
-      <Stats />
-      <ServiceCards />
-      <SocialProof />
-      <Reasons />
-      <LatestNews />
+    <>
+      <div className="snap-container overflow-y-auto lg:snap-y lg:snap-mandatory">
+        <Hero />
+        <Stats />
+        <ServiceCards />
+        <SocialProof />
+        <Reasons />
+        <LatestNews />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }

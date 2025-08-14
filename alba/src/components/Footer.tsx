@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white py-4">
+    <footer className="mt-auto bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white py-4 relative z-10 block">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm" style={{color: '#ffffff'}}>
