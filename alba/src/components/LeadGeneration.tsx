@@ -91,7 +91,7 @@ export default function LeadGeneration() {
 
         {/* Download Resources */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
+          <h3 className="text-2xl font-bold text-center mb-8" style={{color: '#ffffff !important'}}>
             📚 無料ダウンロード資料
           </h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -106,14 +106,14 @@ export default function LeadGeneration() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center mb-2">
-                      <span className="text-xs font-semibold px-2 py-1 rounded-full bg-white/20 mr-2">
+                      <span className="text-xs font-semibold px-2 py-1 rounded-full bg-white/20 mr-2" style={{color: '#ffffff !important'}}>
                         {resource.subtitle}
                       </span>
                     </div>
                     <h4 className="text-xl font-bold mb-2" style={{color: '#ffffff !important'}}>
                       {resource.title}
                     </h4>
-                    <p className="text-white/90 text-sm leading-relaxed">
+                    <p className="text-sm leading-relaxed" style={{color: '#ffffff !important'}}>
                       {resource.description}
                     </p>
                   </div>
@@ -129,7 +129,7 @@ export default function LeadGeneration() {
                         <svg className="w-4 h-4 text-white/80 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
                         </svg>
-                        <span className="text-white/90">{feature}</span>
+                        <span style={{color: '#ffffff !important'}}>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -151,7 +151,7 @@ export default function LeadGeneration() {
 
         {/* Assessment Tools */}
         <div>
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
+          <h3 className="text-2xl font-bold text-center mb-8" style={{color: '#ffffff !important'}}>
             🔍 無料診断ツール
           </h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -168,14 +168,14 @@ export default function LeadGeneration() {
                     <h4 className="text-xl font-bold mb-1" style={{color: '#ffffff !important'}}>
                       {tool.title}
                     </h4>
-                    <p className="text-white/90 text-sm">
+                    <p className="text-sm" style={{color: '#ffffff !important'}}>
                       {tool.description}
                     </p>
                     <div className="flex items-center mt-2">
                       <svg className="w-4 h-4 text-white/80 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                       </svg>
-                      <span className="text-sm text-white/90">所要時間: {tool.duration}</span>
+                      <span className="text-sm" style={{color: '#ffffff !important'}}>所要時間: {tool.duration}</span>
                     </div>
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function LeadGeneration() {
                         <svg className="w-4 h-4 text-white/80 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4"/>
                         </svg>
-                        <span className="text-white/90">{benefit}</span>
+                        <span style={{color: '#ffffff !important'}}>{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -213,10 +213,10 @@ export default function LeadGeneration() {
         {/* Bottom CTA */}
         <div className="mt-16 text-center animate-fade-in-up delay-600">
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-white">
+            <h3 className="text-2xl font-bold mb-4" style={{color: '#ffffff !important'}}>
               より詳しい相談をご希望の方は
             </h3>
-            <p className="text-white/90 mb-6">
+            <p className="mb-6" style={{color: '#ffffff !important'}}>
               専門家による個別相談で、御社の具体的な課題に対する解決策をご提案いたします
             </p>
             <Link
