@@ -106,66 +106,58 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div 
                 key={service.title} 
-                className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-12 items-center animate-fade-in-up delay-${(index + 1) * 200}`}
+                className="modern-card p-8 group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up"
+                style={{ animationDelay: `${(index + 1) * 200}ms` }}
               >
-                {/* Service Icon & Title */}
-                <div className="flex-1">
-                  <div className={`w-20 h-20 mx-auto lg:mx-0 mb-6 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center text-white transform hover:scale-110 transition-transform duration-300`}>
-                    {service.icon}
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-[var(--primary-color)] text-center lg:text-left">
-                    {service.title}
-                  </h2>
-                  <p className="text-base sm:text-lg text-[var(--text-muted)] mb-6 text-center lg:text-left leading-relaxed">
-                    {service.detailedDescription}
-                  </p>
-                  
-                  {/* Features List */}
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold mb-4 text-[var(--primary-color)] text-center lg:text-left">
-                      主なサービス内容
-                    </h3>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center justify-center lg:justify-start">
-                          <svg className="w-5 h-5 text-[var(--accent-color)] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-                          </svg>
-                          <span className="text-[var(--text-muted)]">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  {/* CTA Button */}
-                  <div className="text-center lg:text-left">
-                    <Link 
-                      href={service.href}
-                      className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-semibold hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)] transition-all duration-300 transform hover:scale-105"
-                    >
-                      詳細を見る
-                      <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
                 
-                {/* Service Card Preview */}
-                <div className="flex-1 max-w-md">
-                  <div className="modern-card p-6 lg:p-8 relative overflow-hidden group">
-                    <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
-                    
-                    <div className="relative z-10">
-                      <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center text-white`}>
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                  {/* Left side - Icon, Title, Description */}
+                  <div className="lg:col-span-2">
+                    <div className="flex items-start gap-6 mb-6">
+                      <div className={`w-20 h-20 flex-shrink-0 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center text-white transform group-hover:scale-110 transition-transform duration-300`}>
                         {service.icon}
                       </div>
-                      <h3 className="text-xl font-bold mb-4 text-[var(--primary-color)] text-center">
-                        {service.title}
+                      <div className="flex-1">
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[var(--primary-color)]">
+                          {service.title}
+                        </h2>
+                        <p className="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed">
+                          {service.detailedDescription}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Right side - Features List & CTA */}
+                  <div className="lg:col-span-1">
+                    <div className="mb-8">
+                      <h3 className="text-lg font-semibold mb-4 text-[var(--primary-color)]">
+                        主なサービス内容
                       </h3>
-                      <p className="text-[var(--text-muted)] text-center leading-relaxed">
-                        {service.description}
-                      </p>
+                      <ul className="space-y-3">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start">
+                            <svg className="w-5 h-5 text-[var(--accent-color)] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span className="text-[var(--text-muted)] text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {/* CTA Button */}
+                    <div>
+                      <Link 
+                        href={service.href}
+                        className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-semibold hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)] transition-all duration-300 transform hover:scale-105 w-full justify-center"
+                      >
+                        詳細を見る
+                        <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                      </Link>
                     </div>
                   </div>
                 </div>

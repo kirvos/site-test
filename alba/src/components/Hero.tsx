@@ -29,18 +29,24 @@ export default function Hero() {
           <div className="animate-fade-in-up">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight">
               <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
-                人事労務の課題を、
+                労務の不安を
               </span>
-              <br className="md:hidden"/>
               <span className="bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent drop-shadow-2xl">
-                プロが一括解決
+                &ldquo;見える化&rdquo;
+              </span>
+              <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
+                し、
+              </span>
+              <br/>
+              <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
+                事業の推進力に。
               </span>
             </h1>
           </div>
           <div className="animate-fade-in-up delay-300">
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4" style={{color: '#ffffff'}}>
-              ALBA社会保険労務士法人は、複雑な人事労務の課題に対し、<br/>
-              <span className="text-[#febf00] font-semibold">最適なソリューション</span>を提供し、貴社の成長を強力にサポートします。
+              就業規則からクラウド運用、IPO労務まで。<br/>
+              <span className="text-[#febf00] font-semibold">専門家チームが一社一社に最適解を。</span>
             </p>
           </div>
           <div className="animate-fade-in-up delay-500">
@@ -49,14 +55,14 @@ export default function Hero() {
                 href="/contact"
                 className="group bg-gradient-to-r from-[#febf00] to-yellow-400 text-[var(--primary-color)] text-lg sm:text-xl font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-[#febf00]/25 transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 relative overflow-hidden w-full sm:w-auto"
               >
-                <span className="relative z-10">無料相談はこちら</span>
+                <span className="relative z-10">無料相談を予約</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-[#febf00] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </a>
               <a
-                href="/downloads"
+                href="/risk-assessment"
                 className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-lg sm:text-xl font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-2xl hover:bg-white hover:text-[var(--primary-color)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-1 w-full sm:w-auto"
               >
-                <span className="relative z-10">資料ダウンロード</span>
+                <span className="relative z-10">労務リスクを30秒で診断</span>
               </a>
             </div>
           </div>
@@ -90,19 +96,25 @@ export default function Hero() {
         <div className="animate-fade-in-up">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
-              人事労務の課題を、
+              労務の不安を
             </span>
-            <br className="md:hidden"/>
             <span className="bg-gradient-to-r from-[#febf00] to-yellow-300 bg-clip-text text-transparent drop-shadow-2xl">
-              プロが一括解決
+              &ldquo;見える化&rdquo;
+            </span>
+            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
+              し、
+            </span>
+            <br/>
+            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
+              事業の推進力に。
             </span>
           </h1>
         </div>
         
         <div className="animate-fade-in-up delay-300">
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-2 sm:px-4" style={{color: '#ffffff'}}>
-            ALBA社会保険労務士法人は、複雑な人事労務の課題に対し、<br/>
-            <span className="text-[#febf00] font-semibold">最適なソリューション</span>を提供し、貴社の成長を強力にサポートします。
+            就業規則からクラウド運用、IPO労務まで。<br/>
+            <span className="text-[#febf00] font-semibold">専門家チームが一社一社に最適解を。</span>
           </p>
         </div>
         
