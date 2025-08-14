@@ -174,7 +174,7 @@ export default function ServicesPage() {
             お困りのことがございましたら<br />
             お気軽にご相談ください
           </h2>
-          <p className="text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
+          <p className="!text-white text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
             専門スタッフがお客様のニーズに合わせて最適なソリューションをご提案いたします
           </p>
           <Link 

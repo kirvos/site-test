@@ -270,7 +270,7 @@ export default function AboutPage() {
             私たちと一緒に<br />
             労務課題を解決しませんか？
           </h2>
-          <p className="text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
+          <p className="!text-white text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
             専門家チームがお客様の課題に最適なソリューションをご提案いたします
           </p>
           <Link 

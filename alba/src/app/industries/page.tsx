@@ -332,7 +332,7 @@ export default function IndustriesPage() {
             あなたの業種に特化した<br />
             労務ソリューションを相談しませんか？
           </h2>
-          <p className="text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
+          <p className="!text-white text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
             業界経験豊富な専門家が、御社の課題に最適なソリューションをご提案いたします
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -298,7 +298,7 @@ export default function PricingPage() {
             最適なプランを<br />
             無料でご提案いたします
           </h2>
-          <p className="text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
+          <p className="!text-white text-lg sm:text-xl mb-8" style={{color: '#ffffff !important'}}>
             お客様の課題とご予算に合わせて、最適なソリューションをカスタマイズいたします
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
