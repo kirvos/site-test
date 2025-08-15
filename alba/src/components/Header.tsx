@@ -18,7 +18,6 @@ export default function Header() {
           <ul className="flex space-x-6 text-lg">
             <li><Link href="/services" className="text-white hover:text-[#febf00] transition-colors duration-300">サービス</Link></li>
             <li><Link href="/industries" className="text-white hover:text-[#febf00] transition-colors duration-300">業種別</Link></li>
-            <li><Link href="/case-studies" className="text-white hover:text-[#febf00] transition-colors duration-300">事例紹介</Link></li>
             <li><Link href="/pricing" className="text-white hover:text-[#febf00] transition-colors duration-300">料金</Link></li>
             <li><Link href="/about" className="text-white hover:text-[#febf00] transition-colors duration-300">会社情報</Link></li>
             <li><Link href="/contact" className="bg-gradient-to-r from-[#febf00] to-yellow-300 text-[var(--primary-color)] px-5 py-2 rounded-full hover:bg-white hover:bg-gradient-to-r hover:from-yellow-300 hover:to-[#febf00] transition-all duration-300 font-bold">無料相談</Link></li>
@@ -62,20 +61,29 @@ export default function Header() {
             </li>
             <li>
               <Link 
-                href="/case-studies" 
+                href="/industries" 
                 className="block py-3 px-4 text-white hover:text-[#febf00] hover:bg-white/10 rounded-lg transition-colors text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                事例紹介
+                業種別
               </Link>
             </li>
             <li>
               <Link 
-                href="/blog" 
+                href="/pricing" 
                 className="block py-3 px-4 text-white hover:text-[#febf00] hover:bg-white/10 rounded-lg transition-colors text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                ブログ
+                料金
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/about" 
+                className="block py-3 px-4 text-white hover:text-[#febf00] hover:bg-white/10 rounded-lg transition-colors text-lg font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                会社情報
               </Link>
             </li>
             <li>
@@ -84,7 +92,7 @@ export default function Header() {
                 className="block py-3 px-4 bg-gradient-to-r from-[#febf00] to-yellow-300 text-[var(--primary-color)] hover:bg-gradient-to-r hover:from-yellow-300 hover:to-[#febf00] rounded-lg transition-all duration-300 text-lg font-bold text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                お問い合わせ
+                無料相談
               </Link>
             </li>
           </ul>

@@ -1,6 +1,124 @@
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
+// 業種別事例データ
+const caseStudiesByIndustry = {
+  'IT・スタートアップ': [
+    {
+      id: 'it-b',
+      title: 'IT企業B社様 - 助成金活用による事業拡大支援',
+      client: {
+        name: '佐藤 様',
+        company: 'IT企業B社',
+        role: '代表取締役',
+        industry: 'IT・ソフトウェア開発',
+        employees: '80名',
+        location: '東京都港区'
+      },
+      challenge: {
+        description: '急速な事業成長に伴う人材採用拡大において、採用・教育コストの負担が経営を圧迫していました。',
+        details: [
+          '年間30名の新規採用計画に対する資金調達が課題',
+          'DX推進のための技術研修費用が年間500万円必要',
+          '助成金制度の複雑さから申請を断念していた',
+          'スタートアップ期のため、キャッシュフローが不安定'
+        ]
+      },
+      results: {
+        description: '複数の助成金獲得により、積極的な人材投資と事業拡大を実現。',
+        metrics: [
+          { label: '助成金総額', value: '1,200万円', description: '3種類の助成金を獲得' },
+          { label: '採用費回収率', value: '85%', description: '採用コストの大部分をカバー' },
+          { label: '研修費カバー率', value: '100%', description: 'DX研修費用を完全カバー' },
+          { label: 'ROI', value: '15倍', description: '申請費用対効果' }
+        ]
+      },
+      testimonial: {
+        quote: "助成金申請で大きな成果を上げることができ、事業拡大の資金調達に成功しました。",
+        author: "佐藤 様"
+      },
+      services: ['助成金・補助金申請代行'],
+      duration: '18ヶ月'
+    }
+  ],
+  '建設・製造': [
+    {
+      id: 'manufacturing-a',
+      title: '製造業A社様 - 社会保険業務効率化プロジェクト',
+      client: {
+        name: '田中 様',
+        company: '製造業A社',
+        role: '人事部長',
+        industry: '製造業',
+        employees: '150名',
+        location: '愛知県名古屋市'
+      },
+      challenge: {
+        description: 'A社では従業員の増加に伴い、社会保険手続きの複雑化と業務量の増大に悩んでいました。',
+        details: [
+          '月平均20件の新規加入・脱退手続きが発生',
+          '算定基礎届や月額変更届の処理に月5日を要していた',
+          '人事担当者の残業時間が月40時間超過',
+          '手続きミスによる再申請が月2〜3件発生'
+        ]
+      },
+      results: {
+        description: '業務効率化により、人事担当者が戦略的業務に集中できる環境を実現。',
+        metrics: [
+          { label: '処理時間短縮', value: '80%減', description: '月5日→1日に短縮' },
+          { label: '残業時間削減', value: '75%減', description: '40時間→10時間に削減' },
+          { label: 'ミス発生率', value: '0%', description: '手続きミスが完全にゼロ化' },
+          { label: 'コスト削減', value: '30%減', description: '年間人件費ベース' }
+        ]
+      },
+      testimonial: {
+        quote: "ALBAさんのおかげで、複雑な社会保険手続きがスムーズになり、本業に集中できるようになりました。",
+        author: "田中 様"
+      },
+      services: ['社会保険アウトソーシング'],
+      duration: '12ヶ月'
+    }
+  ],
+  '小売・飲食': [
+    {
+      id: 'service-c',
+      title: 'サービス業C社様 - 緊急時対応体制の構築',
+      client: {
+        name: '鈴木 様',
+        company: 'サービス業C社',
+        role: '総務課長',
+        industry: 'サービス業',
+        employees: '200名',
+        location: '大阪府大阪市'
+      },
+      challenge: {
+        description: '多店舗展開により発生する突発的な労務問題への迅速な対応が困難でした。',
+        details: [
+          '全国20店舗での労務管理の一元化が課題',
+          '急な人員配置変更時の社会保険手続きが頻発',
+          '店長クラスの労務知識不足によるコンプライアンスリスク',
+          '本社総務部門のリソース不足（2名体制）'
+        ]
+      },
+      results: {
+        description: '全社的な労務管理体制の構築により、コンプライアンス強化と業務効率化を実現。',
+        metrics: [
+          { label: '対応時間短縮', value: '90%減', description: '3日→4時間以内に短縮' },
+          { label: 'コンプライアンス違反', value: '0件', description: '導入後違反事例なし' },
+          { label: '本社業務負担', value: '60%減', description: '総務部門の負担軽減' },
+          { label: '店舗満足度', value: '95%', description: '店長アンケート結果' }
+        ]
+      },
+      testimonial: {
+        quote: "迅速で丁寧な対応により、急な手続きにも柔軟に対応していただけて助かっています。",
+        author: "鈴木 様"
+      },
+      services: ['スポット手続き代行'],
+      duration: '継続中（2年間）'
+    }
+  ]
+};
+
 const industries = [
   {
     title: 'IT・スタートアップ',
@@ -238,6 +356,68 @@ export default function IndustriesPage() {
                       <div className="text-xs text-[var(--text-muted)]">満足度</div>
                     </div>
                   </div>
+
+                  {/* Case Studies Section */}
+                  {caseStudiesByIndustry[industry.title] && (
+                    <div className="mt-12 pt-8 border-t border-gray-200">
+                      <h3 className="text-xl font-bold text-[var(--primary-color)] mb-6 flex items-center">
+                        <svg className="w-6 h-6 mr-3 text-[var(--accent-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        導入事例
+                      </h3>
+                      <div className="space-y-6">
+                        {caseStudiesByIndustry[industry.title].map((caseStudy) => (
+                          <div key={caseStudy.id} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300">
+                            <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                              {/* Left: Company info & Challenge */}
+                              <div className="lg:w-1/2">
+                                <div className="flex items-center mb-4">
+                                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${industry.gradient} flex items-center justify-center text-white font-bold mr-3 text-sm`}>
+                                    {caseStudy.client.company.charAt(0)}
+                                  </div>
+                                  <div>
+                                    <h4 className="font-bold text-[var(--primary-color)] text-sm">{caseStudy.client.company}</h4>
+                                    <p className="text-xs text-[var(--text-muted)]">{caseStudy.client.industry} / {caseStudy.client.employees}</p>
+                                  </div>
+                                </div>
+                                <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-4">
+                                  {caseStudy.challenge.description}
+                                </p>
+                                <div className="text-xs text-[var(--text-muted)] italic border-l-2 border-[var(--accent-color)] pl-3">
+                                  "{caseStudy.testimonial.quote}" - {caseStudy.testimonial.author}
+                                </div>
+                              </div>
+                              
+                              {/* Right: Results */}
+                              <div className="lg:w-1/2">
+                                <h5 className="font-semibold text-[var(--primary-color)] mb-3 text-sm">導入効果</h5>
+                                <div className="grid grid-cols-2 gap-3">
+                                  {caseStudy.results.metrics.slice(0, 4).map((metric, idx) => (
+                                    <div key={idx} className="text-center p-3 bg-white rounded-lg shadow-sm">
+                                      <p className="text-lg font-bold text-[var(--accent-color)]">{metric.value}</p>
+                                      <p className="text-xs text-[var(--text-muted)]">{metric.label}</p>
+                                    </div>
+                                  ))}
+                                </div>
+                                <div className="mt-4 text-right">
+                                  <Link 
+                                    href={`/industries/${industry.title === 'IT・スタートアップ' ? 'it-startup' : industry.title === '建設・製造' ? '建設・製造' : '小売・飲食'}/${caseStudy.id}`}
+                                    className="inline-flex items-center text-sm text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-colors duration-300"
+                                  >
+                                    詳細を見る
+                                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                  </Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* CTA Button */}
                   <div className="mt-8 text-center">

@@ -7,21 +7,21 @@ export default function SocialProof() {
       author: "田中 様",
       company: "製造業A社",
       role: "人事部長",
-      caseStudyLink: "/case-studies/manufacturing-a"
+      caseStudyLink: "/industries/建設・製造/manufacturing-a"
     },
     {
       quote: "助成金申請で大きな成果を上げることができ、事業拡大の資金調達に成功しました。",
       author: "佐藤 様", 
       company: "IT企業B社",
       role: "代表取締役",
-      caseStudyLink: "/case-studies/it-b"
+      caseStudyLink: "/industries/it-startup/it-b"
     },
     {
       quote: "迅速で丁寧な対応により、急な手続きにも柔軟に対応していただけて助かっています。",
       author: "鈴木 様",
       company: "サービス業C社", 
       role: "総務課長",
-      caseStudyLink: "/case-studies/service-c"
+      caseStudyLink: "/industries/小売・飲食/service-c"
     }
   ];
 
