@@ -196,7 +196,7 @@ export default function CaseStudyDetailPage() {
                 </svg>
               </div>
               <blockquote className="text-lg sm:text-xl text-[var(--text-muted)] leading-relaxed mb-6 italic">
-                "{caseStudy.testimonial.quote}"
+                &ldquo;{caseStudy.testimonial.quote}&rdquo;
               </blockquote>
               <div className="font-semibold text-[var(--primary-color)]">
                 {caseStudy.testimonial.author}

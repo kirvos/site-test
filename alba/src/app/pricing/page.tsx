@@ -118,7 +118,7 @@ export default function PricingPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan) => (
               <div key={plan.name} className={`modern-card p-6 lg:p-8 text-center relative group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${plan.recommended ? 'ring-4 ring-[var(--accent-color)] ring-opacity-50' : ''}`}>
                 {plan.recommended && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

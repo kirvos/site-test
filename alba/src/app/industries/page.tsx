@@ -385,7 +385,7 @@ export default function IndustriesPage() {
                                   {caseStudy.challenge.description}
                                 </p>
                                 <div className="text-xs text-[var(--text-muted)] italic border-l-2 border-[var(--accent-color)] pl-3">
-                                  "{caseStudy.testimonial.quote}" - {caseStudy.testimonial.author}
+                                  &ldquo;{caseStudy.testimonial.quote}&rdquo; - {caseStudy.testimonial.author}
                                 </div>
                               </div>
                               
