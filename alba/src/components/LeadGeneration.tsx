@@ -81,10 +81,10 @@ export default function LeadGeneration() {
     <section className="snap-start py-16 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)]" data-snap>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h2 className="!text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             労務管理に役立つ資料を無料でダウンロード
           </h2>
-          <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto" style={{color: '#ffffff !important'}}>
+          <p className="!text-white text-lg sm:text-xl max-w-3xl mx-auto" style={{color: '#ffffff !important'}}>
             実務に即使える資料や診断ツールで、労務課題の解決をサポートします
           </p>
         </div>
@@ -216,7 +216,7 @@ export default function LeadGeneration() {
             <h3 className="text-2xl font-bold mb-4" style={{color: '#ffffff !important'}}>
               より詳しい相談をご希望の方は
             </h3>
-            <p className="mb-6" style={{color: '#ffffff !important'}}>
+            <p className="!text-white mb-6" style={{color: '#ffffff !important'}}>
               専門家による個別相談で、御社の具体的な課題に対する解決策をご提案いたします
             </p>
             <Link
