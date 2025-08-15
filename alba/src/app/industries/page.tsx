@@ -358,7 +358,7 @@ export default function IndustriesPage() {
                   </div>
 
                   {/* Case Studies Section */}
-                  {caseStudiesByIndustry[industry.title] && (
+                  {caseStudiesByIndustry[industry.title as keyof typeof caseStudiesByIndustry] && (
                     <div className="mt-12 pt-8 border-t border-gray-200">
                       <h3 className="text-xl font-bold text-[var(--primary-color)] mb-6 flex items-center">
                         <svg className="w-6 h-6 mr-3 text-[var(--accent-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -367,7 +367,7 @@ export default function IndustriesPage() {
                         導入事例
                       </h3>
                       <div className="space-y-6">
-                        {caseStudiesByIndustry[industry.title].map((caseStudy) => (
+                        {caseStudiesByIndustry[industry.title as keyof typeof caseStudiesByIndustry]?.map((caseStudy) => (
                           <div key={caseStudy.id} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300">
                             <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                               {/* Left: Company info & Challenge */}
