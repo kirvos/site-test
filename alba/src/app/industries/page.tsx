@@ -116,6 +116,82 @@ const caseStudiesByIndustry = {
       services: ['スポット手続き代行'],
       duration: '継続中（2年間）'
     }
+  ],
+  '医療・介護': [
+    {
+      id: 'healthcare-d',
+      title: '医療法人D会様 - 24時間体制労務管理の構築',
+      client: {
+        name: '山田 様',
+        company: '医療法人D会',
+        role: '事務長',
+        industry: '医療・介護',
+        employees: '300名',
+        location: '福岡県福岡市'
+      },
+      challenge: {
+        description: '複数の医療施設を運営する中で、24時間365日体制の労務管理と複雑な夜勤体制の適正管理が課題でした。',
+        details: [
+          '3施設での夜勤・交代制勤務の複雑な管理',
+          '医療従事者の労働時間管理の困難',
+          '感染対策期間中の特殊勤務手当計算',
+          '労働基準監督署からの指導対応'
+        ]
+      },
+      results: {
+        description: '医療業界特化の労務管理により、コンプライアンス強化と職員満足度向上を実現。',
+        metrics: [
+          { label: '労務管理効率', value: '70%向上', description: '管理時間を大幅短縮' },
+          { label: 'コンプライアンス', value: '100%達成', description: '監督署指導事項ゼロ' },
+          { label: '職員満足度', value: '92%', description: '勤務環境改善効果' },
+          { label: 'システム効率', value: '60%向上', description: 'ペーパーレス化効果' }
+        ]
+      },
+      testimonial: {
+        quote: "医療業界特有の複雑な労務管理を完全にサポートしていただき、職員が安心して勤務できる環境が整いました。特に夜勤体制の適正化により、働き方改革も実現できています。",
+        author: "山田 様"
+      },
+      services: ['医療業界特化労務管理'],
+      duration: '24ヶ月'
+    }
+  ],
+  'プロフェッショナルファーム': [
+    {
+      id: 'professional-e',
+      title: 'コンサルティングファームE社様 - 高度人材評価制度構築',
+      client: {
+        name: '佐々木 様',
+        company: 'コンサルティングファームE社',
+        role: 'パートナー',
+        industry: 'プロフェッショナルサービス',
+        employees: '120名',
+        location: '東京都千代田区'
+      },
+      challenge: {
+        description: '専門性の高いコンサルタントの適正評価と報酬設計、パートナー昇格基準の明文化が急務でした。',
+        details: [
+          '専門職の成果評価基準が不明確',
+          'パートナー昇格の客観的基準設定',
+          '高度人材の報酬体系設計',
+          '知的財産と秘密保持の労務管理'
+        ]
+      },
+      results: {
+        description: '専門性を重視した評価制度により、人材定着率向上と組織力強化を実現。',
+        metrics: [
+          { label: '人材定着率', value: '95%', description: '離職率を大幅改善' },
+          { label: '評価満足度', value: '88%', description: '公正な評価制度確立' },
+          { label: '昇格基準明確化', value: '100%', description: '客観的基準を完全整備' },
+          { label: '業績向上', value: '25%増', description: 'モチベーション向上効果' }
+        ]
+      },
+      testimonial: {
+        quote: "プロフェッショナルファーム特有の課題を深く理解したソリューションにより、優秀な人材の確保と育成体制が大幅に改善されました。パートナー昇格基準の明文化により、組織の透明性も向上しています。",
+        author: "佐々木 様"
+      },
+      services: ['高度人材評価制度設計'],
+      duration: '15ヶ月'
+    }
   ]
 };
 
@@ -400,17 +476,6 @@ export default function IndustriesPage() {
                                     </div>
                                   ))}
                                 </div>
-                                <div className="mt-4 text-right">
-                                  <Link 
-                                    href={`/industries/${industry.title === 'IT・スタートアップ' ? 'it-startup' : industry.title === '建設・製造' ? '建設・製造' : '小売・飲食'}/${caseStudy.id}`}
-                                    className="inline-flex items-center text-sm text-[var(--primary-color)] hover:text-[var(--accent-color)] transition-colors duration-300"
-                                  >
-                                    詳細を見る
-                                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                  </Link>
-                                </div>
                               </div>
                             </div>
                           </div>
@@ -425,7 +490,7 @@ export default function IndustriesPage() {
                       href={industry.href}
                       className="inline-flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white font-semibold hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)] transition-all duration-300 transform hover:scale-105"
                     >
-                      詳細事例を見る
+                      業界詳細を見る
                       <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
                       </svg>
