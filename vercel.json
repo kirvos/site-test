@@ -1,14 +1,5 @@
 {
   "buildCommand": "cd alba && npm run build",
   "outputDirectory": "alba/.next",
-  "installCommand": "cd alba && npm install",
-  "framework": "nextjs",
-  "functions": {
-    "alba/src/app/**/*.ts": {
-      "runtime": "nodejs18.x"
-    },
-    "alba/src/app/**/*.tsx": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "installCommand": "cd alba && npm install"
 }
