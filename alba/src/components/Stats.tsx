@@ -76,10 +76,10 @@ export default function Stats() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-[100svh]">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-4">
+            <h2 className="!text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
               数字で見るALBA社会保険労務士の実績
             </h2>
-            <p className="text-white text-base sm:text-lg px-4" style={{color: '#ffffff !important'}}>
+            <p className="!text-white text-base sm:text-lg px-4" style={{color: '#ffffff !important'}}>
               お客様に選ばれ続ける理由がここにあります
             </p>
           </div>
@@ -94,15 +94,15 @@ export default function Stats() {
                   {stat.icon}
                 </div>
                 <div className="relative z-10 mb-3">
-                  <p className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-white transform scale-0 transition-transform duration-700 delay-${(index + 1) * 200}`} style={{color: '#ffffff !important', textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>
+                  <p className={`!text-white text-3xl sm:text-4xl md:text-5xl font-extrabold transform scale-0 transition-transform duration-700 delay-${(index + 1) * 200}`} style={{color: '#ffffff !important', textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>
                     {stat.value}
                   </p>
                 </div>
                 <div className="relative z-10">
-                  <p className="text-white font-semibold text-lg mb-2" style={{color: '#ffffff !important'}}>
+                  <p className="!text-white font-semibold text-lg mb-2" style={{color: '#ffffff !important'}}>
                     {stat.label}
                   </p>
-                  <p className="text-white text-sm" style={{color: '#ffffff !important'}}>
+                  <p className="!text-white text-sm" style={{color: '#ffffff !important'}}>
                     {stat.description}
                   </p>
                 </div>
@@ -133,10 +133,10 @@ export default function Stats() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col justify-center min-h-[100svh]">
         <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 px-4">
+          <h2 className="!text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4">
             数字で見るALBA社会保険労務士の実績
           </h2>
-          <p className="text-white text-base sm:text-lg px-4" style={{color: '#ffffff !important'}}>
+          <p className="!text-white text-base sm:text-lg px-4" style={{color: '#ffffff !important'}}>
             お客様に選ばれ続ける理由がここにあります
           </p>
         </div>
@@ -157,17 +157,17 @@ export default function Stats() {
               
               {/* Value */}
               <div className="relative z-10 mb-3">
-                <p className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-white transform ${mounted && isVisible ? 'scale-100' : 'scale-0'} transition-transform duration-700 delay-${(index + 1) * 200}`} style={{color: '#ffffff !important', textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>
+                <p className={`!text-white text-3xl sm:text-4xl md:text-5xl font-extrabold transform ${mounted && isVisible ? 'scale-100' : 'scale-0'} transition-transform duration-700 delay-${(index + 1) * 200}`} style={{color: '#ffffff !important', textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>
                   {stat.value}
                 </p>
               </div>
               
               {/* Label */}
               <div className="relative z-10">
-                <p className="text-white font-semibold text-lg mb-2" style={{color: '#ffffff !important'}}>
+                <p className="!text-white font-semibold text-lg mb-2" style={{color: '#ffffff !important'}}>
                   {stat.label}
                 </p>
-                <p className="text-white text-sm" style={{color: '#ffffff !important'}}>
+                <p className="!text-white text-sm" style={{color: '#ffffff !important'}}>
                   {stat.description}
                 </p>
               </div>
